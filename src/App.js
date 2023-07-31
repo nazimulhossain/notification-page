@@ -71,10 +71,13 @@ export default function App() {
     );
   };
   return (
-    <div className="app">
-      <Menu count={count} handleCount={handleCount} />
-      <NotificationsList list={list} />
-    </div>
+    <>
+      <main className="app">
+        <Menu count={count} handleCount={handleCount} />
+        <NotificationsList list={list} />
+      </main>
+      <Footer />
+    </>
   );
 }
 
@@ -86,9 +89,9 @@ function Menu({ count, handleCount }) {
         <span className="number">{count}</span>
       </div>
 
-      <p className="allread" onClick={handleCount}>
+      <button className="allread" onClick={handleCount}>
         Mark all as read
-      </p>
+      </button>
     </div>
   );
 }
@@ -133,5 +136,22 @@ function Notifications({ notification }) {
         <img src="images/image-chess.webp" alt="chess" className="chess" />
       )}
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="attribution">
+      Challenge by{' '}
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Frontend Mentor
+      </a>
+      . Coded by <a href="https://github.com/nazimulhossain">Nazimul Hossain</a>
+      .
+    </footer>
   );
 }

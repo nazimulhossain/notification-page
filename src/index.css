@@ -29,6 +29,11 @@ body {
   display: grid;
   place-items: center;
   padding: 2.4rem 0;
+  background-color: var(--Very-light-grayish-blue);
+}
+
+button {
+  all: unset;
 }
 
 .app {
@@ -36,6 +41,7 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
   padding: 2.4rem;
+  background-color: var(--White);
 }
 
 .menu {
@@ -76,6 +82,9 @@ img {
   display: flex;
   gap: 2.4rem;
   padding-left: 1.6rem;
+}
+
+.notifications:not(:last-child) {
   margin-bottom: 2.4rem;
 }
 .title {
@@ -145,6 +154,12 @@ img {
   color: var(--Blue);
 }
 
+.attribution {
+  text-align: center;
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
+}
+
 /* ****************** */
 /* MEDIA QUERIES */
 /* ****************** */
@@ -157,5 +172,9 @@ img {
   }
   .message {
     padding: 1.6rem 2.4rem;
+  }
+
+  .attribution {
+    font-size: 1.4rem;
   }
 }
